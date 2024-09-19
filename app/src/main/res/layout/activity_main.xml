@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".MainActivity">
+
+	<Button
+		android:id="@+id/create_random"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="5dp"
+		android:text="Create random Box"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"/>
+
+	<TextView
+		android:id="@+id/custom_title"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		android:text="Create custom"
+		android:textAlignment="center"
+		app:layout_constraintTop_toBottomOf="@+id/create_random" />
+
+	<LinearLayout
+		android:id="@+id/custom_serial"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		android:orientation="horizontal"
+		android:gravity="center"
+		app:layout_constraintTop_toBottomOf="@+id/custom_title">
+
+		<Button
+			android:id="@+id/random_num"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="5dp"
+			android:text="# R" />
+
+		<EditText
+			android:id="@+id/custom_number"
+			android:layout_width="180dp"
+			android:layout_height="match_parent"
+			android:hint="enter at least 4 digits"
+			android:inputType="numberDecimal"
+			android:digits="0123456789"/>
+
+		<Button
+			android:id="@+id/create_custom"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="5dp"
+			android:text="create" />
+
+
+	</LinearLayout>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/custom_serial"
+		app:layout_constraintBottom_toBottomOf="parent">
+
+	<ListView
+		android:id="@+id/listview"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp" />
+
+	</RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
